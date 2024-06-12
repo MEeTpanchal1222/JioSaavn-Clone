@@ -33,8 +33,9 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => LikedSongsModel(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'JioSaavn App',
-        home: HomeScreen(), // Use your main screen here
+        home: WelcomePage(), // Use your main screen here
       ),
     );
   }

@@ -66,10 +66,10 @@ class TopArtistSongsScreen extends StatelessWidget {
 
     print('Artist Songs: $artistSongs');
 
-    // Generate paths for SongPlayerScreen
+
     List<String> songPaths = artistSongs
         .map((song) => 'assets/songs/$song')
-        .toList(); // Update this to match your folder structure
+        .toList();
 
     print('Song Paths: $songPaths');
 

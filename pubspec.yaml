@@ -42,10 +42,10 @@ dependencies:
   just_audio: ^0.9.36
 #  cloud_firestore: ^4.15.4
   provider: ^6.1.1
-#  uuid: ^4.2.4
+  uuid: ^4.2.4
   audio_service: ^0.18.12
   audioplayers: 5.2.1
-#  file: ^7.0.0
+  file: ^7.0.0
 
 dev_dependencies:
   flutter_test:

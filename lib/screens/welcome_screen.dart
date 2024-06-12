@@ -36,7 +36,7 @@ class _WelcomePageState extends State<WelcomePage> {
       nullallways != null ?
       HomeScreen()
           : Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black38,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

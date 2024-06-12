@@ -26,8 +26,16 @@ class CustomBottomNavigationBar extends StatelessWidget {
           label: 'Search',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.library_music, color: _getColor(2)),
+          icon: Icon(Icons.play_circle, color: _getColor(2)),
+          label: 'For You ',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.manage_accounts, color: _getColor(2)),
           label: 'My Library',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.dashboard, color: _getColor(1)),
+          label: 'pro',
         ),
       ],
       backgroundColor: Color.fromARGB(31, 255, 255, 255),
