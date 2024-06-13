@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      backgroundColor: Colors.black,
+      backgroundColor:Color(0xff2a2d36),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -256,6 +256,11 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialPageRoute(builder: (context) => MyLibrary()),
             );
           }
+    else if (_selectedIndex == 3) {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TopArtistSongsScreen()),
+    );
         },
       ),
     );

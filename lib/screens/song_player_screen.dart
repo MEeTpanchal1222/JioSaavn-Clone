@@ -33,7 +33,7 @@ class SongPlayerScreen extends StatefulWidget {
 
 class _SongPlayerScreenState extends State<SongPlayerScreen> {
   late just_audio.AudioPlayer _audioPlayer;
-  bool isPlaying = false;
+  bool isPlaying = true;
   int currentIndex = 0;
   bool liked = false;
   Duration _duration = const Duration();
@@ -135,7 +135,8 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(_position.toString().split(".")[0]),
+                // Text(_position.toStringAsFixed(2).padLeft(5, '0')),
+                 Text(_position.toString().split(".")[0]),
                 Expanded(
                   child: Slider(
                     activeColor: Colors.black,
@@ -177,6 +178,7 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                 IconButton(
                   icon: Icon(liked ? Icons.favorite : Icons.favorite_border),
                   onPressed: () {
+                    addLikedSong()
                     _likeSong(context);
                   },
                 ),
