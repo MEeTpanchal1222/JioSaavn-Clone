@@ -63,10 +63,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/jiosaavn_name.png',
-                      height: 150,
-                      width: 200,
+                    Container(
+                      height: 180,
+                      width: 400,
+                      child: Image.asset(
+                        'assets/JioSaavn Logo White Transparent.png',
+                        fit: BoxFit.fitHeight,
+                      ),
                     ),
                     SizedBox(height: 20),
                     Text(

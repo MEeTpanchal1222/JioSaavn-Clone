@@ -42,7 +42,7 @@ class _WelcomePageState extends State<WelcomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 30),
-              Image.asset('assets/jio_saavn_black_logo.png'),
+              Image.asset('assets/JioSaavn Icon Transparent.png'),
             ],
           ),
         ),

@@ -188,8 +188,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: Container(
+          color: Colors.red,
+          child: Image.asset('assets/JioSaavn Logo White Transparent.png',fit: BoxFit.fitWidth,width: 300,),
+        ),
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xff2a2d36),
         actions: [
           IconButton(
             onPressed: () {
