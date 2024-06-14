@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 // import 'package:firebase_auth/firebase_auth.dart';
-import '../email_auth/login_screen.dart';
-import '../library_screen/library_screen.dart';
-import '../navigation_bar.dart';
-import '../search_screen.dart';
-import '../song_player_screen.dart';
-import '../top_artist_screen.dart';
+import '../uitels/globle_variable.dart';
+import 'email_auth/login_screen.dart';
+import 'library_screen/library_screen.dart';
+import 'navigation_bar.dart';
+import 'search_screen.dart';
+import 'song_player_screen.dart';
+import 'top_artist_screen.dart';
 
 class Song {
   final String name;
@@ -20,9 +22,18 @@ class Song {
 }
 
 List<Song> recommendedSongs = [
-  Song(name: 'Alone', path: 'assets/songs/song1.mp3', imagePath: 'assets/song1.png'),
-  Song(name: 'Kesariya', path: 'assets/songs/song2.mp3', imagePath: 'assets/song2.png'),
-  Song(name: 'We own it', path: 'assets/songs/song3.mp3', imagePath: 'assets/song3.png'),
+  Song(
+      name: 'Alone',
+      path: 'assets/songs/song1.mp3',
+      imagePath: 'assets/song1.png'),
+  Song(
+      name: 'Kesariya',
+      path: 'assets/songs/song2.mp3',
+      imagePath: 'assets/song2.png'),
+  Song(
+      name: 'We own it',
+      path: 'assets/songs/song3.mp3',
+      imagePath: 'assets/song3.png'),
 ];
 
 // Add this function outside the HomeScreen class
@@ -40,7 +51,6 @@ Future<List<String>> fetchTopSongsForArtist(String artistName) async {
   return artistTopSongs[artistName] ?? [];
 }
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -52,19 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   void logout() async {
-    //await FirebaseAuth.instance.signOut();
-
     Navigator.popUntil(context, (route) => route.isFirst);
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => LoginScreen()),
     );
-  }
-
-  Color _getColor(int index) {
-    return _selectedIndex == index
-        ? Colors.white
-        : const Color.fromARGB(255, 128, 128, 128);
   }
 
   Widget _buildSuggestedItem(BuildContext context, Song song) {
@@ -115,7 +117,8 @@ class _HomeScreenState extends State<HomeScreen> {
               print('Tapped on ${songs[index].name}');
 
               // Fetch the top songs for the selected artist
-              List<String> topSongs = await fetchTopSongsForArtist(songs[index].name);
+              List<String> topSongs =
+                  await fetchTopSongsForArtist(songs[index].name);
               print('Top songs for ${songs[index].name}: $topSongs');
 
               // Navigate to TopArtistSongsScreen with the fetched top songs
@@ -136,25 +139,51 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     List<Song> topArtists = [
-      Song(name: 'Travis Scott', path: 'assets/songs/eminem.mp3', imagePath: 'assets/travis.png'),
-      Song(name: 'Sonu Nigam', path: 'assets/songs/arjit.mp3', imagePath: 'assets/sonu.png'),
-      Song(name: 'Drake', path: 'assets/songs/selena.mp3', imagePath: 'assets/drake.png'),
+      Song(
+          name: 'Travis Scott',
+          path: 'assets/songs/eminem.mp3',
+          imagePath: 'assets/travis.png'),
+      Song(
+          name: 'Sonu Nigam',
+          path: 'assets/songs/arjit.mp3',
+          imagePath: 'assets/sonu.png'),
+      Song(
+          name: 'Drake',
+          path: 'assets/songs/selena.mp3',
+          imagePath: 'assets/drake.png'),
     ];
 
     List<Song> newReleases = [
-      Song(name: 'Phle bhi main', path: 'assets/songs/new1.mp3', imagePath: 'assets/phlebhimain.png'),
-      Song(name: 'Satranga', path: 'assets/songs/new2.mp3', imagePath: 'assets/satranga.png'),
-      Song(name: 'Duniya jala denge', path: 'assets/songs/new3.mp3', imagePath: 'assets/sariduniya.png'),
+      Song(
+          name: 'Phle bhi main',
+          path: 'assets/songs/new1.mp3',
+          imagePath: 'assets/phlebhimain.png'),
+      Song(
+          name: 'Satranga',
+          path: 'assets/songs/new2.mp3',
+          imagePath: 'assets/satranga.png'),
+      Song(
+          name: 'Duniya jala denge',
+          path: 'assets/songs/new3.mp3',
+          imagePath: 'assets/sariduniya.png'),
     ];
 
     List<Song> jioSaavnPicks = [
-      Song(name: 'Challeya', path: 'assets/songs/pick1.mp3', imagePath: 'assets/challeya.png'),
-      Song(name: 'Zinda Banda', path: 'assets/songs/pick2.mp3', imagePath: 'assets/zindabanda.png'),
-      Song(name: 'Jawan Title Track', path: 'assets/songs/pick3.mp3', imagePath: 'assets/jawan.png'),
+      Song(
+          name: 'Challeya',
+          path: 'assets/songs/pick1.mp3',
+          imagePath: 'assets/challeya.png'),
+      Song(
+          name: 'Zinda Banda',
+          path: 'assets/songs/pick2.mp3',
+          imagePath: 'assets/zindabanda.png'),
+      Song(
+          name: 'Jawan Title Track',
+          path: 'assets/songs/pick3.mp3',
+          imagePath: 'assets/jawan.png'),
     ];
 
     return Scaffold(
@@ -170,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      backgroundColor:Color(0xff2a2d36),
+      backgroundColor: Color(0xff2a2d36),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -240,29 +269,44 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
-        selectedIndex: _selectedIndex,
-        onItemTapped: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-          if (_selectedIndex == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SearchScreen()),
-            );
-          } else if (_selectedIndex == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MyLibrary()),
-            );
-          }
-    else if (_selectedIndex == 3) {
-    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => TopArtistSongsScreen()),
-    );
-        },
-      ),
+          selectedIndex: _selectedIndex,
+          onItemTapped: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+            if (index == 1) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchScreen()),
+              );
+            } else if (index == 2) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SongPlayerScreen(
+                    songPaths: [recommendedSongs[0].path],
+                    songName: recommendedSongs[0].name,
+                    imagePath: recommendedSongs[0].imagePath,
+                  ),
+                ),
+              );
+            } else if (index == 3) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyLibrary()),
+              );
+            } else if (index == 4) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TopArtistSongsScreen(
+                    artistName: topArtists[0].name,
+                    topSongs: musicList1,
+                  ),
+                ),
+              );
+            }
+          }),
     );
   }
 }

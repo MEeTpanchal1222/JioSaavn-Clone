@@ -22,20 +22,21 @@ class TopArtistSongsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(artistName),
+        title: Text(artistName,style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.black,
       ),
+      backgroundColor:Color(0xff2a2d36),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Top Songs for $artistName:',
+              'Top Songs form $artistName:',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Colors.white,
               ),
             ),
             SizedBox(height: 20),
@@ -81,7 +82,7 @@ class TopArtistSongsScreen extends StatelessWidget {
           songPaths: songPaths,
           songName: songTitle,
           // Replace with the actual image path
-          imagePath: 'assets/default_image.png',
+          imagePath: 'assets/arjit.png',
         ),
       ),
     );

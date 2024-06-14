@@ -178,7 +178,6 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                 IconButton(
                   icon: Icon(liked ? Icons.favorite : Icons.favorite_border),
                   onPressed: () {
-                    addLikedSong()
                     _likeSong(context);
                   },
                 ),

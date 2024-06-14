@@ -14,6 +14,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      backgroundColor:
       currentIndex: selectedIndex,
       onTap: onItemTapped,
       items: [
@@ -30,16 +31,16 @@ class CustomBottomNavigationBar extends StatelessWidget {
           label: 'For You ',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.manage_accounts, color: _getColor(2)),
+          icon: Icon(Icons.manage_accounts, color: _getColor(3)),
           label: 'My Library',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.dashboard, color: _getColor(1)),
+          icon: Icon(Icons.dashboard, color: _getColor(4)),
           label: 'pro',
         ),
       ],
-      backgroundColor: Color.fromARGB(31, 255, 255, 255),
-      selectedItemColor: Color.fromARGB(255, 255, 255, 255),
+
+      selectedItemColor: Colors.white,
       unselectedItemColor: Colors.grey,
     );
   }

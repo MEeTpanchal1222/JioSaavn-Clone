@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/phone_auth/home_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/home_screen.dart';
 import 'package:music_x_audio_player_app_ch6_2/screens/welcome_screen.dart';
 import 'package:provider/provider.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:music_x_audio_player_app_ch6_2/screens/email_auth/signup_screen.dart';
 
-import '../phone_auth/home_screen.dart';
+import '../home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
