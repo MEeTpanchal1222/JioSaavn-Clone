@@ -23,8 +23,26 @@ class _SearchScreenState extends State<SearchScreen> {
     'Challeya': 'assets/challeya.png',
     'Zinda Banda': 'assets/zindabanda.png',
     'Jawan Title Track': 'assets/jawan.png',
+    'Tu Maro Daryo' :'assets/tu maro.jpg',
+    'AGAR TUM SAATH':'assets/agar.jpg',
+    'Nanpan No Nedlo' : 'assets/nanpan.jpg',
+    'Khoya Hain' : 'assets/khoya.jpg',
+    'Papa Meri Jan' : 'assets/papa.jpg',
+    'Chandaliyo Ugyo Re' : 'assets/chandaliyo.jpg',
+    'shiddat' : 'assets/shiddat.jpg',
+    'Tum Se' :  'assets/tumse.jpg',
+    'Phir Bhi Aas Lagi Hai Dil Mein' : 'assets/phirbhi.jpg',
+    'O Maahi' : 'assets/omaahi.jpg',
+    'Apna Bana Le' : 'assets/apna.jpg',
+    'Tu Hai kaya mere liye ' :  'assets/mere.jpg',
+    'Dil Meri Na sune' :'assets/dil.jpg',
+    'Tainu Khabar Nahi' : 'assets/tainu.jpg',
+    'Humsafar ':  'assets/hamdafar.jpg',
+    'Thara Paisa Thari' : 'assets/thara.jpg',
+    'Tum jo Aaye Zindagi' : 'assets/tum.jpg',
+    'Hum Nahi Sudhrenge ' : 'assets/hum.jpg',
 
-    // Add more entries as needed
+
   };
 
   Map<String, String> songPathsMap = {
@@ -37,7 +55,27 @@ class _SearchScreenState extends State<SearchScreen> {
     'Challeya': 'assets/songs/pick1.mp3',
     'Zinda Banda': 'assets/songs/pick2.mp3',
     'Jawan Title Track': 'assets/songs/pick3.mp3',
-    // Add more entries as needed
+
+
+    'Tu Maro Daryo' : "assets/songs/Tu Maaro Dariyo.mp3",
+    'AGAR TUM SAATH':"assets/songs/tum saath.mp3",
+    'Nanpan No Nedlo' :  "assets/songs/nanpan.mp3",
+    'Khoya Hain' : "assets/songs/khoya.mp3",
+    'Papa Meri Jan' :  "assets/songs/papa.mp3",
+    'Chandaliyo Ugyo Re' : "assets/songs/Chandaliyo.mp3",
+    'shiddat' : "assets/songs/shiddat.mp3",
+    'Tum Se' :  'assets/songs/tumse.jpg',
+    'Phir Bhi Aas Lagi Hai Dil Mein' : 'assets/songs/phirbhi.jpg',
+    'O Maahi' : 'assets/songs/omaahi.jpg',
+    'Apna Bana Le' : 'assets/songs/apna.jpg',
+    'Tu Hai kaya mere liye ' :  'assets/songs/mere.jpg',
+    'Dil Meri Na sune' :"assets/songs/dil.mp3",
+    'Tainu Khabar Nahi' :  "assets/songs/tainu.mp3",
+    'Humsafar ':  "assets/songs/Humsafar.mp3",
+    'Thara Paisa Thari' : "assets/songs/Thara.mp3",
+    'Tum jo Aaye Zindagi' :  "assets/songs/Tum.mp3",
+    'Hum Nahi Sudhrenge ' : "assets/songs/hum.mp3",
+
   };
 
   List<String> allSongTitles = [
@@ -49,7 +87,26 @@ class _SearchScreenState extends State<SearchScreen> {
     'Kesariya',
     'Jawan Title Track',
     'Zinda Banda',
-    'Challeya'
+    'Challeya',
+    'Tu Maro Daryo',
+    'AGAR TUM SAATH',
+    'Nanpan No Nedlo',
+    'Khoya Hain',
+    'Papa Meri Jan',
+    'Chandaliyo Ugyo Re',
+    'shiddat',
+    'Tum Se',
+    'Phir Bhi Aas Lagi Hai Dil Mein',
+    'O Maahi',
+    'Apna Bana Le',
+    'Tu Hai kaya mere liye ',
+    'Dil Meri Na sune',
+    'Tainu Khabar Nahi',
+    'Humsafar ',
+    'Thara Paisa Thari',
+    'Tum jo Aaye Zindagi',
+    'Hum Nahi Sudhrenge ',
+
   ]; // Add all your song titles
 
   List<String> displayedSongs = []; // Songs to be displayed based on the search

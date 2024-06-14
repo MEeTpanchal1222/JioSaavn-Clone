@@ -188,9 +188,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Container(
-          color: Colors.red,
-          child: Image.asset('assets/JioSaavn Logo White Transparent.png',fit: BoxFit.fitWidth,width: 300,),
+        title: Container(
+          height: 80,
+          child: Image.asset('assets/JioSaavn Logo White Transparent.png',fit: BoxFit.fitWidth,),
         ),
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xff2a2d36),
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               logout();
             },
-            icon: Icon(Icons.exit_to_app),
+            icon: Icon(Icons.exit_to_app,color: Colors.white,),
           ),
         ],
       ),
@@ -305,7 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialPageRoute(
                   builder: (context) => TopArtistSongsScreen(
                     artistName: topArtists[0].name,
-                    topSongs: musicList1,
+                    topSongs: musicList,
                   ),
                 ),
               );

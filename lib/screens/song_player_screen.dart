@@ -326,9 +326,9 @@ class _HomePageState extends State<HomePage> {
                         });
                         await player.seek(Duration(seconds: new_value.toInt()));
                       },
-                      min: 0.0,
+                      min: 0,
                       value: value,
-                      max: 214.0,
+                      max: 214,
                       onChanged: (new_value) {
                         setState(() {
                           value = new_value;

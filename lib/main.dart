@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_x_audio_player_app_ch6_2/provider/provider.dart';
 import 'package:music_x_audio_player_app_ch6_2/screens/home_screen.dart';
 import 'package:music_x_audio_player_app_ch6_2/screens/welcome_screen.dart';
 import 'package:provider/provider.dart';
@@ -6,21 +7,13 @@ import 'package:provider/provider.dart';
 import 'modal/song.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
-  // runApp(
-  //   ChangeNotifierProvider(
-  //     create: (context) => LikedSongsModel(),
-  //     child: MyApp(),
-  //   ),
-  // );
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => LikedSongsModel()),
-        // Add other providers if needed
+        ChangeNotifierProvider(
+          create: (context) => IntroProvider(),
+        ),
       ],
       child: MyApp(),
     ),
@@ -35,7 +28,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'JioSaavn App',
-        home: WelcomePage(), // Use your main screen here
+        home: Provider.of<IntroProvider>(context, listen: true).isClicked
+            ? HomeScreen() : WelcomePage(), // Use your main screen here
       ),
     );
   }

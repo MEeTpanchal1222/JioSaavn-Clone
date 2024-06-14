@@ -113,18 +113,13 @@ List<String> musicList = [
   "assets/audio/papa.mp3",
   "assets/audio/Chandaliyo.mp3",
   "assets/audio/shiddat.mp3",
-];
-
-List<String> musicList1 = [
   "assets/audio/dil.mp3",
   "assets/audio/tainu.mp3",
   "assets/audio/Humsafar.mp3",
   "assets/audio/Thara.mp3",
   "assets/audio/Tum.mp3",
   "assets/audio/hum.mp3",
-];
 
-List<String> musicList2 = [
   "assets/audio/pehle.mp3",
   "assets/audio/Tumse.mp3",
   "assets/audio/PhirBhi.mp3",
