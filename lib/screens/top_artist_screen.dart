@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/song_player_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/song_player_screen/song_player_screen.dart';
 
 // Define a static map of artists to their top songs
 Map<String, List<String>> artistTopSongs = {

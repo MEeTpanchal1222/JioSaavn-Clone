@@ -1,10 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:music_x_audio_player_app_ch6_2/screens/email_auth/signup_screen.dart';
 
-import '../semmer.dart';
+import '../semmer/semmer.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -27,10 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
         errorMessage = "Please enter all the required details!";
       });
     } else {
-      // try {
-      //   UserCredential userCredential = await FirebaseAuth.instance
-      //       .signInWithEmailAndPassword(email: email, password: password);
-      //   if (userCredential.user != null) {
+
            Navigator.popUntil(context, (route) => route.isFirst);
            Navigator.pushReplacement(
             context,
@@ -38,13 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
                builder: (context) => semmer(),
              ),
           );
-      //   }
-      // } on FirebaseAuthException catch (ex) {
-      //   log(ex.code.toString());
-      //   setState(() {
-      //     errorMessage = "Incorrect email or password.";
-      //   });
-      // }
+
     }
   }
 

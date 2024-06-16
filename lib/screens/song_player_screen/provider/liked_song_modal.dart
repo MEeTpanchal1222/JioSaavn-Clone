@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import '../modal/song.dart';
+import '../../../modal/song.dart';
 
 class LikedSongsModel with ChangeNotifier {
   final List<Song> _likedSongs = [];
@@ -18,6 +18,16 @@ class LikedSongsModel with ChangeNotifier {
     _likedSongs.remove(song);
     notifyListeners();
   }
+  void toggleLikedSong(Song song) {
+    if (_likedSongs.contains(song)) {
+      _likedSongs.remove(song);
+    } else {
+      _likedSongs.add(song);
+    }
+  }
 
   bool isLiked(Song song) => _likedSongs.contains(song);
 }
+
+
+

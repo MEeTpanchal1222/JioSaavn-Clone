@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:music_x_audio_player_app_ch6_2/provider/provider.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/home_screen.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/welcome_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/home_screen/home_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/slash_screen/welcome_screen.dart';
 import 'package:provider/provider.dart';
-
-import 'modal/song.dart';
+import 'screens/song_player_screen/provider/liked_song_modal.dart';
 
 Future<void> main() async {
   runApp(

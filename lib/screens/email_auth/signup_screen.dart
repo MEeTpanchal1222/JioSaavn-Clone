@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../home_screen.dart';
+import '../home_screen/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -33,23 +33,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
         errorMessage = "Passwords do not match!";
       });
     } else {
-      // try {
-      //   UserCredential userCredential = await FirebaseAuth.instance
-      //       .createUserWithEmailAndPassword(email: email, password: password);
-      //   if (userCredential.user != null) {
-      //     // User created successfully, navigate to HomeScreen
+
            Navigator.push(
             context,
              MaterialPageRoute(builder: (context) => HomeScreen()),
            );
-      //   }
-      //   log("User created!");
-      // } on FirebaseAuthException catch (ex) {
-      //   log(ex.code.toString());
-      //   setState(() {
-      //     errorMessage = "Error creating account. Please try again.";
-      //   });
-      // }
+
     }
   }
 

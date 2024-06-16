@@ -74,6 +74,8 @@ flutter:
   assets:
     - assets/
     - assets/songs/
+    - assets/list_image_that_not_for_onlyshow/
+    - assets/list_image_that_not_for_onlyshow/topcharts/
 
 
 

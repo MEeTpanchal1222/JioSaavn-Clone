@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/home_screen.dart';
-import 'library_screen/library_screen.dart';
-import 'navigation_bar.dart';
-import 'song_player_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/home_screen/home_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/top_artist_screen.dart';
+import '../../uitels/globle_variable.dart';
+import '../bottem_navigation_bar_screen/navigation_bar.dart';
+import '../library_screen/library_screen.dart';
+import '../song_player_screen/song_player_screen.dart';
+
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -55,8 +58,6 @@ class _SearchScreenState extends State<SearchScreen> {
     'Challeya': 'assets/songs/pick1.mp3',
     'Zinda Banda': 'assets/songs/pick2.mp3',
     'Jawan Title Track': 'assets/songs/pick3.mp3',
-
-
     'Tu Maro Daryo' : "assets/songs/Tu Maaro Dariyo.mp3",
     'AGAR TUM SAATH':"assets/songs/tum saath.mp3",
     'Nanpan No Nedlo' :  "assets/songs/nanpan.mp3",
@@ -65,9 +66,9 @@ class _SearchScreenState extends State<SearchScreen> {
     'Chandaliyo Ugyo Re' : "assets/songs/Chandaliyo.mp3",
     'shiddat' : "assets/songs/shiddat.mp3",
     'Tum Se' :  'assets/songs/tumse.jpg',
-    'Phir Bhi Aas Lagi Hai Dil Mein' : 'assets/songs/phirbhi.jpg',
-    'O Maahi' : 'assets/songs/omaahi.jpg',
-    'Apna Bana Le' : 'assets/songs/apna.jpg',
+    'Phir Bhi Aas Lagi Hai Dil Mein' :  "assets/songs//PhirBhi.mp3",
+    'O Maahi' : "assets/songs/omaahi.mp3",
+    'Apna Bana Le' :  "assets/songs/apna.mp3",
     'Tu Hai kaya mere liye ' :  'assets/songs/mere.jpg',
     'Dil Meri Na sune' :"assets/songs/dil.mp3",
     'Tainu Khabar Nahi' :  "assets/songs/tainu.mp3",
@@ -107,9 +108,9 @@ class _SearchScreenState extends State<SearchScreen> {
     'Tum jo Aaye Zindagi',
     'Hum Nahi Sudhrenge ',
 
-  ]; // Add all your song titles
+  ];
 
-  List<String> displayedSongs = []; // Songs to be displayed based on the search
+  List<String> displayedSongs = [];
 
   @override
   void initState() {
@@ -120,7 +121,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // Set background color here
+      backgroundColor: Color(0xff2a2d36), // Set background color here
 
       body: SingleChildScrollView(
         child: Padding(
@@ -148,34 +149,43 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
-        selectedIndex: _selectedIndex,
-        onItemTapped: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-          if (_selectedIndex == 0) {
-            // Navigate to HomeScreen when the Home tab is tapped
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
-            );
-          } else if (_selectedIndex == 2) {
-            // Navigate to MyLibrary when the Library tab is tapped
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MyLibrary()),
-            );
-          }
-        },
-        currentIndex: _selectedIndex,
-      ),
+          selectedIndex: _selectedIndex,
+          currentIndex: _selectedIndex,
+          onItemTapped: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+            if (_selectedIndex == 0) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScreen()),
+              );
+            } else if (_selectedIndex == 2) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SongPlayerScreen(
+                    songPaths: [recommendedSongs[0].path],
+                    songName: recommendedSongs[0].name,
+                    imagePath: recommendedSongs[0].imagePath,
+                  ),
+                ),
+              );
+            } else if (_selectedIndex == 3) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyLibrary()),
+              );
+            } else if (_selectedIndex == 4) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen()
+                ),
+              );
+            }
+          }),
     );
-  }
-
-  Color _getColor(int index) {
-    return _selectedIndex == index
-        ? Colors.white
-        : const Color.fromARGB(255, 128, 128, 128);
   }
 
   Widget _buildSearchBar() {
@@ -208,7 +218,6 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   Widget _buildSongList() {
-    // Check if the search bar is empty, and only show the trending text if it is
     if (displayedSongs.isEmpty) {
       return Center(
         child: Text(
@@ -221,11 +230,11 @@ class _SearchScreenState extends State<SearchScreen> {
       );
     }
 
-    // Take only the top 3 songs from the displayed songs
-    List<String> top3Songs = displayedSongs.take(3).toList();
+
+    List<String> top4Songs = displayedSongs.take(4).toList();
 
     return Column(
-      children: top3Songs.map((songTitle) {
+      children: top4Songs.map((songTitle) {
         return _buildSuggestedItem(songTitle);
       }).toList(),
     );
@@ -234,13 +243,11 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget _buildSuggestedItem(String songTitle) {
     return GestureDetector(
       onTap: () {
-        // Provide necessary parameters to SongPlayerScreen
         navigateToSongPlayer(songTitle);
       },
       child: Column(
         children: [
           Image.asset(
-            // Get the image path based on the song title
             songImagesMap[songTitle] ?? 'assets/default_image.png',
             height: 100,
             width: 100,
@@ -257,19 +264,16 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   void navigateToSongPlayer(String songTitle) {
-    // Perform any logic to get the song path based on the title
     String songPath = getSongPath(songTitle);
 
-    // Navigate to SongPlayerScreen with the required parameters
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => SongPlayerScreen(
           songPaths: [
             songPath
-          ], // Pass the song path or paths based on your logic
+          ],
           songName: songTitle,
-          // Use the same logic to get the image path
           imagePath: songImagesMap[songTitle] ?? 'assets/default_image.png',
         ),
       ),
@@ -277,8 +281,6 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   String getSongPath(String songTitle) {
-    // Replace this logic with your actual logic to get the song path based on the title
-    // Assuming you have a dynamic list of songs
     Map<String, String> songPathsMap = {
       'Phle bhi main': 'assets/songs/new1.mp3',
       'Satranga': 'assets/songs/new2.mp3',
@@ -289,7 +291,24 @@ class _SearchScreenState extends State<SearchScreen> {
       'Challeya': 'assets/songs/pick1.mp3',
       'Zinda Banda': 'assets/songs/pick2.mp3',
       'Jawan Title Track': 'assets/songs/pick3.mp3',
-      // Add more entries as needed
+      'Tu Maro Daryo' : "assets/songs/Tu Maaro Dariyo.mp3",
+      'AGAR TUM SAATH':"assets/songs/tum saath.mp3",
+      'Nanpan No Nedlo' :  "assets/songs/nanpan.mp3",
+      'Khoya Hain' : "assets/songs/khoya.mp3",
+      'Papa Meri Jan' :  "assets/songs/papa.mp3",
+      'Chandaliyo Ugyo Re' : "assets/songs/Chandaliyo.mp3",
+      'shiddat' : "assets/songs/shiddat.mp3",
+      'Tum Se' :  'assets/songs/tumse.jpg',
+      'Phir Bhi Aas Lagi Hai Dil Mein' :  "assets/songs//PhirBhi.mp3",
+      'O Maahi' : "assets/songs/omaahi.mp3",
+      'Apna Bana Le' :  "assets/songs/apna.mp3",
+      'Tu Hai kaya mere liye ' :  'assets/songs/mere.jpg',
+      'Dil Meri Na sune' :"assets/songs/dil.mp3",
+      'Tainu Khabar Nahi' :  "assets/songs/tainu.mp3",
+      'Humsafar ':  "assets/songs/Humsafar.mp3",
+      'Thara Paisa Thari' : "assets/songs/Thara.mp3",
+      'Tum jo Aaye Zindagi' :  "assets/songs/Tum.mp3",
+      'Hum Nahi Sudhrenge ' : "assets/songs/hum.mp3",
     };
     return songPathsMap[songTitle] ?? '';
   }

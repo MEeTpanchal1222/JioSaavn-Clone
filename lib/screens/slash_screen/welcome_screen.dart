@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:music_x_audio_player_app_ch6_2/screens/home_screen.dart';
+import 'package:music_x_audio_player_app_ch6_2/screens/home_screen/home_screen.dart';
 
-import '../uitels/globle_variable.dart';
-import 'email_auth/login_screen.dart';
+import '../../uitels/globle_variable.dart';
+import '../email_auth/login_screen.dart';
+
+
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
