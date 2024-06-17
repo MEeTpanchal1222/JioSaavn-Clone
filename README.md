@@ -82,6 +82,10 @@ To run this project locally, follow these steps:
 
 *App Video*
 
+
+https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/238398d0-b6e2-4c65-85e0-7d4b3d6413dc
+
+
 ## 🤝 Contributing
 
 We welcome contributions to enhance the functionality and features of this app. Please follow these steps:
@@ -100,7 +104,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact:
 - **Author:** Meet Panchal
-- **Email:** meetpanchal1222@example.com
+- **Email:** Panchalmeetr97@gmail.com
 - **GitHub:** [MEeTpanchal1222](https://github.com/MEeTpanchal1222)
 
 ---
