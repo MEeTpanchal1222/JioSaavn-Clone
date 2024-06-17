@@ -54,38 +54,39 @@ To run this project locally, follow these steps:
 
 ## 📸 Screenshots
 
-    
+<p>
+    <r>
 *slash screen*
-<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/2c02998c-ae91-4166-a0e3-b20f2af76ba5"  alt="slash screen" width="200"/>  
-
+<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/2c02998c-ae91-4166-a0e3-b20f2af76ba5"  alt="slash screen" width="200"/>
 *Login screen*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/5b3f13d5-9b13-422e-9c98-59b7a3f4b2b2"  alt="Login screen" width="200"/>
-
+</r> 
+<r>
 *Home Screen*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/e445a7e6-5dd0-44e5-929a-32a12aed1c0e"  alt="Home Screen" width="200"/>
 
 *search screen_1*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/c2401cbb-0b4c-45e7-bb56-a31fc56d2284"  alt="search screen_1" width="200"/>
-
+</r><r>
 *search screen_2*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/d50c7120-3485-4c44-b9fd-cd56ed38bbde"  alt="search screen_2" width="200"/>
 
 *play screen_1*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/a1333e77-9c15-4207-bc02-38bbde8e58a5"  alt="play screen_1" width="200"/>
-
+</r><r>
 *play screen_2*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/89f663d7-f8f2-4e6b-9038-100477db4c48"  alt="play screen_2" width="200"/>
 
 *liked screen*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/75ef864f-47e3-4441-8281-96b54b8a44a5"  alt="liked screen" width="200"/>
-
+</r>
 
 *App Video*
 
 
 https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/238398d0-b6e2-4c65-85e0-7d4b3d6413dc
 
-
+</p>    
 ## 🤝 Contributing
 
 We welcome contributions to enhance the functionality and features of this app. Please follow these steps:
