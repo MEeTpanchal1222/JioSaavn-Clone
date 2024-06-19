@@ -56,14 +56,17 @@ To run this project locally, follow these steps:
 
 <p>
     <r>
+        <row>
+        <p>
+        
 *slash screen*
-<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/2c02998c-ae91-4166-a0e3-b20f2af76ba5"  alt="slash screen" width="200"/>
+<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/2c02998c-ae91-4166-a0e3-b20f2af76ba5"  alt="slash screen" width="200"/></p>
 *Login screen*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/5b3f13d5-9b13-422e-9c98-59b7a3f4b2b2"  alt="Login screen" width="200"/>
 </r> 
 <r>
 *Home Screen*
-<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/e445a7e6-5dd0-44e5-929a-32a12aed1c0e"  alt="Home Screen" width="200"/>
+<img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/e445a7e6-5dd0-44e5-929a-32a12aed1c0e"  alt="Home Screen" width="200"/></r> </row>
 
 *search screen_1*
 <img src ="https://github.com/MEeTpanchal1222/music_x_audio_player_app_ch6_2/assets/143181413/c2401cbb-0b4c-45e7-bb56-a31fc56d2284"  alt="search screen_1" width="200"/>
