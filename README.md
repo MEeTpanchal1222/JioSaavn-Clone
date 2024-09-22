@@ -1,5 +1,4 @@
-# 🎵 Music X Audio Player App
-
+# 🎵JioSaavn
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Platform](https://img.shields.io/badge/platform-Flutter-brightgreen.svg) ![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)
 
 ## 📖 Table of Contents
